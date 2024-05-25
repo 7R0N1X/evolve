@@ -2,22 +2,57 @@
 import "@fontsource/fugaz-one";
 ---
 
-<header class="w-full h-[84px] max-w-screen-xl mx-auto flex justify-between items-center fixed top-0 right-0 left-0 transition z-10">
-  
-  <a href="#" class="logo text-[32px] text-white">EVOLVE</a>
+<header class="w-full h-16 sm:h-[84px] fixed top-0 right-0 left-0 transition-all z-10">
 
-  <nav>
-    <ul class="flex justify-center items-center gap-5 relative text-white">
+  <nav class="w-full h-full max-w-screen-xl m-auto flex justify-between items-center p-4 bg-black sm:bg-transparent">
+
+    <a href="#" class="logo text-2xl sm:text-3xl text-white inline-block ">EVOLVE</a>
+
+    <button id="menu-toggle" class="sm:hidden">
+      <svg id="menu-icon" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+      <svg id="close-icon" class="hidden w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <ul id="menu" class="hidden pb-4 sm:p-0 sm:flex flex-col sm:flex-row justify-center items-center sm:gap-5 absolute sm:static top-[64px] left-0 w-full sm:w-auto bg-black sm:bg-transparent text-white">
       <li><a href="#" class="p-3 inline-block">Team</a></li>
       <li><a href="#" class="p-3 inline-block">Classes</a></li>
       <li><a href="#" class="p-3 inline-block">Locations</a></li>
       <li><a href="#" class="p-3 inline-block">Pricing</a></li>
-      <li>
-        <a href="#" class="px-5 py-2 rounded-full bg-[#C24E3D]">Free Trial</a>
-      </li>
+      <li><a href="#" class="inline-block p-3 sm:px-5 sm:py-2 sm:rounded-full sm:bg-[#C24E3D] sm:text-black">Free Trial</a></li>
     </ul>
+
   </nav>
+
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+      menuIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+  });
+
+  window.addEventListener("scroll", function () {
+    var $header = document.querySelector("header");
+    if (this.window.scrollY > 0) {
+      $header.classList.add("bg-black");
+    } else {
+      $header.classList.remove("bg-black");
+    }
+  });
+</script>
 
 <style>
   .logo {
