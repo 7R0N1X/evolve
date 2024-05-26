@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/manrope": "^5.0.20",
     "@fontsource/fugaz-one": "^5.0.19",
+    "@fontsource/roboto": "^5.0.13",
     "astro": "^4.9.1",
     "tailwindcss": "^3.4.3"
   }
