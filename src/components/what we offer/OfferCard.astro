@@ -1,0 +1,22 @@
+---
+import "@fontsource/roboto";
+import "@fontsource/pt-sans";
+
+import { Image } from "astro:assets";
+import { OFFERS } from "../../js/offers.js";
+---
+
+{
+  OFFERS.map(({ img, title, description }) => (
+    <article class="relative flex flex-col justify-center items-center min-w-72 max-w-72 snap-always snap-center">
+
+      <Image src={img} alt={title} class="rounded-lg w-full h-full" />
+
+      <section class="absolute bottom-5 min-w-60 max-w-60 min-h-32 max-h-32 bg-[#1E1E1E]/90 rounded-lg flex flex-col items-center px-3 pt-5">
+        <h3 class="uppercase text-lg font-bold text-white mb-2">{title}</h3>
+        <p class="text-xs text-white/70 text-center">{description}</p>
+      </section>
+
+    </article>
+  ))
+}
