@@ -1,0 +1,31 @@
+---
+import "@fontsource/roboto";
+import "@fontsource/pt-sans";
+import { Image } from "astro:assets";
+import { information } from "../js/membership-benefits-information.js";
+---
+
+{
+  information.map(({ imagen, imgPosition, title, description, descriptionPosition }) => (
+    <article class={`min-w-full md:min-w-[360px] snap-always snap-center lg:relative lg:max-w-screen-xl lg:flex ${imgPosition} lg:items-center`}>
+
+      <Image src={imagen} alt={title} class="h-64 w-full lg:w-[668px] lg:h-[534px] object-cover" />
+
+      <section class={`bg-[#0D0D0D] text-white p-4 lg:py-20 lg:px-[60px] lg:absolute ${descriptionPosition} lg:w-1/2`}>
+        <h3 class="text-xl uppercase font-bold mb-4">{title}</h3>
+        <p>{description}</p>
+      </section>
+
+    </article>
+  ))
+}
+
+<style>
+  h3{
+    font-family: "Roboto", sans-serif;
+  }
+
+  p{
+    font-family: "PT Sans", sans-serif;
+  }
+</style>
