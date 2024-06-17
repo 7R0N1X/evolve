@@ -1,11 +1,20 @@
 ---
-import '@fontsource/roboto';
-import '@fontsource-variable/manrope';
+import "@fontsource/roboto";
+import "@fontsource-variable/manrope";
 
 import { getImage, Image } from "astro:assets";
 
-import heroImg from "/public/hero.avif"
-const optimizedBackground = await getImage({src: heroImg, format: 'avif'})
+import mobile from "/public/hero/mobile.avif";
+import desktop from "/public/hero/desktop.avif";
+
+const optimizedBackgroundMobile = await getImage({
+  src: mobile,
+  format: "avif",
+});
+const optimizedBackgroundDesktop = await getImage({
+  src: desktop,
+  format: "avif",
+});
 
 import barbell from "/public/icons/barbell.svg";
 import boxingGlove from "/public/icons/boxing-glove.svg";
@@ -21,12 +30,11 @@ const BAGDELIST = [
 ];
 ---
 
-<section class="relative h-screen w-full bg-center bg-cover bg-fixed flex flex-col p-4" style={`background-image: url(${optimizedBackground.src});`}>
-
+<section class="relative h-screen w-full bg-center bg-cover bg-fixed flex flex-col p-4" id="heroBackground" style={{"--background-mobile": `url('${optimizedBackgroundMobile.src}')`, "--background-desktop": `url('${optimizedBackgroundDesktop.src}')`,}}>
   <section class="h-auto flex flex-col justify-center items-center flex-1 gap-5">
     <h1 class="text-white text-center text-4xl sm:text-[58px] sm:w-[500px] font-bold sm:leading-[70px]">UNLEASH YOUR POTENTIAL</h1>
     <a href="" class="inline-block p-3 sm:px-5 sm:py-2 rounded-full bg-[#C24E3D] sm:text-black">CLAIM FREE PASS</a>
-    <Image src={arrowDown} alt='Arrow Down Icon' class="size-[42px]"/>
+    <Image src={arrowDown} alt="Arrow Down Icon" class="size-[42px]" />
   </section>
 
   <section class="max-sm:hidden w-full max-w-screen-xl flex justify-center items-center md:gap-2 lg:gap-[40px] m-auto py-8">
@@ -38,15 +46,24 @@ const BAGDELIST = [
       ))
     }
   </section>
-
 </section>
 
 <style>
-  h1{
-    font-family: 'Roboto', sans-serif;
+  #heroBackground {
+    background-image: var(--background-mobile);
   }
 
-  span{
-    font-family: 'Manrope Variable', sans-serif;  
+  @media (min-width: 768px) {
+    #heroBackground {
+      background-image: var(--background-desktop);
+    }
+  }
+
+  h1 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  span {
+    font-family: "Manrope Variable", sans-serif;
   }
 </style>
