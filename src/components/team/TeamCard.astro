@@ -1,0 +1,26 @@
+---
+import "@fontsource/pt-sans";
+import { Image } from "astro:assets";
+
+import { TEAM } from "../../js/team.js";
+---
+
+{
+  TEAM.map(({ imagePath, name, title }) => (
+    <section class="w-[290px] h-[357px]">
+      <picture class="w-full">
+        <Image src={imagePath} alt={name} class="w-full object-cover rounded-2xl" />
+      </picture>
+      <section class="w-full [&>p]:text-center mt-4">
+        <p class="text-xl">{name}</p>
+        <p>{title}</p>
+      </section>
+    </section>
+  ))
+}
+
+<style>
+  p {
+    font-family: "PT Sans", sans-serif;
+  }
+</style>
