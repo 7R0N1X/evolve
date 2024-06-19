@@ -1,0 +1,32 @@
+---
+import "@fontsource/pt-sans";
+
+import {Image } from "astro:assets";
+import bgCTA from "/public/cta/1.png";
+---
+
+<section id="heroBackground" class="w-full h-[382px] lg:max-h-[382px] bg-[#15191E]">
+
+  <section class="flex justify-center lg:justify-between items-center w-full h-full max-w-screen-xl m-auto px-4">
+
+    <section class="flex flex-col justify-center items-center md:items-start gap-4 text-white max-md:relative max-lg:z-10">
+      <p class="text-xl">Join the EVOLVE community</p>
+      <h2 class="text-2xl font-bold uppercase max-md:text-center max-sm:max-w-[343px] lg:max-w-[300px]">BE part of something great</h2>
+      <a href="#" class="flex justify-center items-center w-[120px] h-10 border rounded-[100px] backdrop-blur-sm">Join</a>
+    </section>
+
+    <Image src={bgCTA} alt="" class="h-[382px] w-[750px] object-cover max-md:absolute max-lg:z-0" />
+    
+  </section>
+
+</section>
+
+<style>
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  p {
+    font-family: "PT Sans", sans-serif;
+  }
+</style>
