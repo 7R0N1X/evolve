@@ -1,16 +1,24 @@
-import img1 from "../../public/member benefits/1.avif"
-import img2 from "../../public/member benefits/2.avif"
+import imgMobile1 from "../../public/member benefits/1-mobile.avif"
+import imgDesktop1 from "../../public/member benefits/1-desktop.avif"
+import imgMobile2 from "../../public/member benefits/2-mobile.avif"
+import imgDesktop2 from "../../public/member benefits/2-desktop.avif"
 
 export const information = [
   {
-    imagen: img1,
+    imagen: [{
+      mobile: imgMobile1,
+      desktop: imgDesktop1
+    }],
     imgPosition: "lg:justify-start",
     descriptionPosition: "lg:right-0",
     title: "Member focused",
     description: "At EVOLVE we are dedicated to putting our members first by tailoring our services to meet their individual needs. From personalised training programs to attentive staff members ready to assist at all times, we strive to create a welcoming and supportive environment where members feel valued and motivated to achieve their fitness goals."
   },
   {
-    imagen: img2,
+    imagen: [{
+      mobile: imgMobile2,
+      desktop: imgDesktop2
+    }],
     imgPosition: "lg:justify-end",
     descriptionPosition: "lg:left-0",
     title: "Tailored programming",
