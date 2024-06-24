@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import "@fontsource/roboto";
 import "@fontsource/pt-sans";
 
 const currentPage = 'privacy & policy';
@@ -7,8 +9,8 @@ const currentPage = 'privacy & policy';
 
 <Layout title="Privacy & Policy" currentPage={currentPage}>
   <section class="w-full bg-neutral-950">
-    <section class="max-w-screen-xl h-full m-auto pt-[84px] text-white px-4">
-      <h1 class="text-2xl mb-4 font-bold">PRIVACY POLICY</h1>
+    <section class="max-w-screen-xl h-full m-auto pt-[80px] sm:pt-[124px] text-white px-4">
+      <h1 class="text-xl mb-4 font-bold">PRIVACY POLICY</h1>
       <p>
         This Privacy Policy sets forth the terms under which EVOLVE uses and
         protects the information that you provide to us when you use this
@@ -94,7 +96,7 @@ const currentPage = 'privacy & policy';
         information that is collected without your consent, unless required by a
         judge with a court order.
       </p>
-      <p class="pb-6">
+      <p class="pb-4 sm:pb-10">
         EVOLVE reserves the right to change the terms of this Privacy Policy at
         any time.
       </p>
@@ -109,9 +111,13 @@ const currentPage = 'privacy & policy';
 
   h1,
   h2 {
-    font-family: "PT Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     display: inline-block;
     position: relative;
+  }
+
+  p{
+    font-family: "PT Sans", sans-serif;
   }
 
   h1::after,
