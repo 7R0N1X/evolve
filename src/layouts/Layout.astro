@@ -1,9 +1,10 @@
 ---
 interface Props {
-	title: string;
+	title: string,
+	currentPage: string;
 }
 
-const { title } = Astro.props;
+const { title, currentPage } = Astro.props;
 
 import ViewTransitions from 'astro/components/ViewTransitions.astro';
 
@@ -23,7 +24,7 @@ import Footer from '../components/footer/Footer.astro';
 		<ViewTransitions />
 	</head>
 	<body>
-		<Navbar />
+		<Navbar currentPage={Astro.props.currentPage}/>
 		<main>
 			<slot />
 		</main>

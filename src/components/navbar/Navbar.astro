@@ -1,12 +1,25 @@
 ---
 import "@fontsource/fugaz-one";
+
+interface Props {
+  currentPage: string;
+}
+
+const getBackgroundColor = (page: string) => {
+  switch (page) {
+    case "privacy & policy":
+      return "bg-black";
+    default:
+      return "transparent";
+  }
+};
 ---
 
-<header class="w-full h-16 sm:h-[84px] fixed top-0 right-0 left-0 transition-all z-30">
+<header class={`w-full h-16 sm:h-[84px] fixed top-0 right-0 left-0 transition-all z-30 max-sm:bg-black ${getBackgroundColor(Astro.props.currentPage)}`}>
 
-  <nav class="w-full h-full max-w-screen-xl m-auto flex justify-between items-center p-4 bg-black sm:bg-transparent">
+  <nav class="w-full h-full max-w-screen-xl m-auto flex justify-between items-center p-4">
 
-    <a href="#" class="logo text-2xl sm:text-3xl text-white inline-block ">EVOLVE</a>
+    <a href="/" class="logo text-2xl sm:text-3xl text-white inline-block">EVOLVE</a>
 
     <button id="menu-toggle" aria-label="Menu" class="sm:hidden">
       <svg id="menu-icon" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -46,10 +59,14 @@ import "@fontsource/fugaz-one";
 
   window.addEventListener("scroll", function () {
     var $header = document.querySelector("header");
-    if (this.window.scrollY > 0) {
-      $header.classList.add("bg-black");
-    } else {
-      $header.classList.remove("bg-black");
+    var currentPage = this.window.location.pathname;
+
+    if (currentPage === "/") {
+      if (this.window.scrollY > 0) {
+        $header.classList.add("bg-black");
+      } else {
+        $header.classList.remove("bg-black");
+      }
     }
   });
 </script>
