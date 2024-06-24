@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CustomizedImage from "../components/CustomizedImage.astro";
+import PageNotFound from "../../public/404.svg";
+---
+
+<Layout title="Error 404 | Page not found">
+  <section class="w-full h-screen m-auto bg-neutral-950 flex justify-center items-center">
+    <CustomizedImage
+      mobileImgUrl={PageNotFound}
+      desktopImgUrl={PageNotFound}
+      alt={"Error 404 | Page not found"}
+      class="w-[500px]"
+    />
+  </section>
+</Layout>
