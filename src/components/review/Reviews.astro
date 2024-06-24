@@ -68,23 +68,26 @@ import { REVIEWS } from "../../js/reviews.js";
 <script>
   import Swiper from "swiper/bundle";
   import "swiper/css/bundle";
+  
+  document.addEventListener("astro:page-load", () => {
 
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    spaceBetween: 16,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-    },
+    const swiper = new Swiper(".swiper", {
+      direction: "horizontal",
+      spaceBetween: 16,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
 
-    pagination: {
-      el: ".swiper-pagination",
-    },
+      pagination: {
+        el: ".swiper-pagination",
+      },
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   });
 </script>
 
@@ -97,7 +100,7 @@ import { REVIEWS } from "../../js/reviews.js";
   }
 
   .swiper-button-next,
-  .swiper-button-prev{
+  .swiper-button-prev {
     --swiper-navigation-size: 15px;
     --swiper-theme-color: white;
     width: 30px;
@@ -105,13 +108,13 @@ import { REVIEWS } from "../../js/reviews.js";
     background: #c24e3d;
   }
 
-  .swiper-button-prev{
+  .swiper-button-prev {
     border-radius: 0 8px 8px 0;
     left: -5px;
     right: auto;
   }
 
-  .swiper-button-next{
+  .swiper-button-next {
     border-radius: 8px 0 0 8px;
     right: -5px;
     left: auto;
