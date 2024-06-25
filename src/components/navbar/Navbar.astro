@@ -43,7 +43,7 @@ const getBackgroundColor = (page: string) => {
 </header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("astro:page-load", () => {
     const menuToggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
     const menuIcon = document.getElementById("menu-icon");
