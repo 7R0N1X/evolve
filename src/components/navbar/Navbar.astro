@@ -31,11 +31,11 @@ const getBackgroundColor = (page: string) => {
     </button>
 
     <ul id="menu" class="hidden pb-4 sm:p-0 sm:flex flex-col sm:flex-row justify-center items-center sm:gap-5 absolute sm:static top-[64px] left-0 w-full sm:w-auto bg-black sm:bg-transparent text-white">
-      <li><a href="#team" class="p-3 inline-block">Team</a></li>
-      <li><a href="#" class="p-3 inline-block">Classes</a></li>
-      <li><a href="#" class="p-3 inline-block">Locations</a></li>
-      <li><a href="#" class="p-3 inline-block">Pricing</a></li>
-      <li><a href="#" class="inline-block p-3 sm:px-5 sm:py-2 sm:rounded-full sm:bg-[#C24E3D] sm:text-black">Free Trial</a></li>
+      <li><a href="/#team" class="relative p-3 inline-block">Team</a></li>
+      <li><a href="/#classes" class="relative p-3 inline-block">Classes</a></li>
+      <li><a href="#" class="relative p-3 inline-block">Locations</a></li>
+      <li><a href="#" class="relative p-3 inline-block">Pricing</a></li>
+      <a href="/#free-pass" class="inline-flex justify-center items-center max-sm:mt-4 px-5 py-2 rounded-full bg-[#C24E3D] sm:text-black">Free Trial</a>
     </ul>
 
   </nav>
@@ -55,6 +55,17 @@ const getBackgroundColor = (page: string) => {
       menuIcon.classList.toggle("hidden");
       closeIcon.classList.toggle("hidden");
     });
+
+    const links = document.querySelectorAll('#menu a');
+
+    links.forEach(link => {
+      link.addEventListener('click', function() {
+        links.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+
   });
 
   window.addEventListener("scroll", function () {
@@ -75,4 +86,32 @@ const getBackgroundColor = (page: string) => {
   .logo {
     font-family: "Fugaz One", system-ui;
   }
+
+  #menu li a:hover::after,
+  #menu li a.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #C24E3D;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  #menu li a:hover::after {
+    animation-name: reveal;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+  }
+
+  @keyframes reveal {
+    0% {
+      width: 0%;
+    }
+
+    100%{
+      width: 100%;
+    }
+  }
+
 </style>
