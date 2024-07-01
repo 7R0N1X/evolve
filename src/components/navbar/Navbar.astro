@@ -29,7 +29,7 @@ const getBackgroundColor = (page: string) => {
 
     <div id="menu" class="absolute top-0 left-0 w-full h-screen bg-black hidden px-4 sm:hidden menu">
 
-      <div class="w-full h-16 flex justify-between items-center">
+      <div class="w-full h-16 flex justify-between items-center relative z-10">
         <p class="text-white text-2xl logo">MENU</p>
         <button id="close-icon" class="" aria-label="Menu">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@ const getBackgroundColor = (page: string) => {
         </button>
       </div>
 
-      <ul class="text-white text-2xl w-full h-screen flex flex-col justify-center items-center gap-2">
+      <ul class="text-white text-lg w-full h-screen flex flex-col justify-center items-center gap-2 absolute top-0 left-0 right-0 z-0">
         <li><a href="/#about-us" class="relative py-2 inline-block uppercase">About us</a></li>
         <li><a href="/#what-we-offer" class="relative py-2 inline-block uppercase">What we offer</a></li>
         <li><a href="/#team" class="relative py-2 inline-block uppercase">Team</a></li>
@@ -47,7 +47,7 @@ const getBackgroundColor = (page: string) => {
       
     </div>
 
-    <ul class="menu max-sm:hidden flex justify-center items-center gap-10 text-white">
+    <ul class="menu max-sm:hidden flex justify-center items-center gap-7 text-white">
       <li><a href="/#about-us" class="relative py-3 inline-block">About us</a></li>
       <li><a href="/#what-we-offer" class="relative py-3 inline-block">What we offer</a></li>
       <li><a href="/#team" class="relative py-3 inline-block">Team</a></li>
