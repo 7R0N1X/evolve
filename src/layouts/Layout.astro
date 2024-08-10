@@ -7,9 +7,8 @@ interface Props {
 const { title, currentPage } = Astro.props;
 
 import ViewTransitions from "astro/components/ViewTransitions.astro";
-
-import Navbar from "../components/navbar/Navbar.astro";
-import Footer from "../components/footer/Footer.astro";
+import Navbar from "../sections/Navbar.astro";
+import Footer from "../sections/Footer.astro";
 ---
 
 <!doctype html>
@@ -24,7 +23,7 @@ import Footer from "../components/footer/Footer.astro";
 		<ViewTransitions />
 	</head>
 	<body>
-		<Navbar currentPage={Astro.props.currentPage} />
+		<Navbar currentPage={currentPage} />
 		<main>
 			<slot />
 		</main>
