@@ -50,3 +50,15 @@ import Footer from "../components/footer/Footer.astro";
 	}
 
 </style>
+
+<script>
+	document.addEventListener('astro:page-load', function() {
+			const hash = window.location.hash;
+			if (hash) {
+					const element = document.querySelector(hash);
+					if (element) {
+							element.scrollIntoView({ behavior: 'smooth' })
+					}
+			}
+	})
+</script>
