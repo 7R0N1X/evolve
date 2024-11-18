@@ -6,8 +6,8 @@ import CustomizedImage from "./CustomizedImage.astro"
 ---
 
 {
-  information.map(({ imagen: [{mobile, desktop}], imgPosition, title, description, descriptionPosition }) => (
-    <article class={`min-w-[300px] snap-always snap-center lg:relative lg:max-w-screen-xl lg:flex ${imgPosition} lg:items-center`}>
+  information.map(({ imagen: [{mobile, desktop}], imgPosition, title, description, descriptionPosition, data_aos, data_aos_delay }) => (
+    <article data-aos={data_aos} data-aos-delay={data_aos_delay} class={`min-w-[300px] snap-always snap-center lg:relative lg:max-w-screen-xl lg:flex ${imgPosition} lg:items-center`}>
 
       <CustomizedImage mobileImgUrl={mobile} desktopImgUrl={desktop} alt={title} class="h-64 w-full lg:w-[668px] lg:h-[534px] object-cover rounded-t-lg lg:rounded-lg" />
 

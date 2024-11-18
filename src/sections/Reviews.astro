@@ -16,20 +16,20 @@ import { REVIEWS } from "../js/reviews.js";
 
     <section class="mx-auto lg:flex-col lg:justify-center lg:items-center">
       <h2 class="text-2xl lg:text-3xl uppercase font-bold text-center mt-3 mb-7 lg:hidden">Member Feedback</h2>
-      <h2 class="text-2xl lg:text-3xl uppercase font-bold text-start mt-3 mb-7 max-lg:hidden max-w-[376px]">What our members say about us</h2>
+      <h2 data-aos="zoom-in" class="text-2xl lg:text-3xl uppercase font-bold text-start mt-3 mb-7 max-lg:hidden max-w-[376px]">What our members say about us</h2>
 
-      <section class="flex flex-col justify-center items-center lg:items-start lg:mt-12">
+      <section data-aos="zoom-in" data-aos-delay="100" class="flex flex-col justify-center items-center lg:items-start lg:mt-12">
         <picture class="inline-flex w-28 relative h-12">
           <Image src={img1} alt="" class="ring-2 ring-[#292929] size-12 rounded-full absolute z-0" />
           <Image src={img2} alt="" class="ring-2 ring-[#292929] size-12 rounded-full absolute z-10 left-8" />
           <Image src={img3} alt="" class="ring-2 ring-[#292929] size-12 rounded-full absolute z-20 left-16" />
         </picture>
-        <p class="text-[#A6A6A6] mt-1">100+ 5 Star Reviews</p>
+        <p data-aos="zoom-in" data-aos-delay="200" class="text-[#A6A6A6] mt-1">100+ 5 Star Reviews</p>
       </section>
 
     </section>
   
-    <div class="swiper max-w-[572px] max-h-[259px] md:min-h-52 md:max-h-52 lg:min-h-[259px] lg:max-h-[259px] max-lg:mt-7 rounded-lg">
+    <div data-aos="zoom-in" data-aos-delay="300" class="swiper max-w-[572px] max-h-[259px] md:min-h-52 md:max-h-52 lg:min-h-[259px] lg:max-h-[259px] max-lg:mt-7 rounded-lg">
       <div class="swiper-wrapper rounded-lg">
         {
           REVIEWS.map(({ reviewText, img, reviewerName, reviewerTitle }) => (

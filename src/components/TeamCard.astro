@@ -6,8 +6,8 @@ import { TEAM } from "../js/team.js";
 ---
 
 {
-  TEAM.map(({ imagePath, name, title }) => (
-    <section class="w-[290px] h-[357px]">
+  TEAM.map(({ imagePath, name, title, data_aos, data_aos_delay }) => (
+    <section data-aos={data_aos} data-aos-delay={data_aos_delay} class="w-[290px] h-[357px]">
       <picture class="w-full">
         <Image src={imagePath} alt={name} class="w-full object-cover rounded-2xl" />
       </picture>

@@ -12,33 +12,49 @@ export const TEAM = [
     imagePath: img1,
     name: "First Last",
     title: "Owner & Trainer",
+    data_aos:"zoom-in",
+    data_aos_delay: "100"
   }, {
     imagePath: img2,
     name: "First Last",
     title: "Owner & Trainer",
+    data_aos:"zoom-in",
+    data_aos_delay: "200"
   }, {
     imagePath: img3,
     name: "First Last",
     title: "Owner & Trainer",
+    data_aos:"zoom-in",
+    data_aos_delay: "300"
   }, {
     imagePath: img4,
     name: "First Last",
     title: "Owner & Trainer",
+    data_aos:"zoom-in",
+    data_aos_delay: "400"
   }, {
     imagePath: img5,
     name: "First Last",
     title: "Owner & Trainer",
+    data_aos:"zoom-in",
+    data_aos_delay: "500"
   }, {
     imagePath: img6,
     name: "First Last",
     title: "Owner & Trainer",
+    data_aos:"zoom-in",
+    data_aos_delay: "600"
   }, {
     imagePath: img7,
     name: "First Last",
     title: "Owner & Trainer",
+    data_aos:"zoom-in",
+    data_aos_delay: "700"
   }, {
     imagePath: img8,
     name: "First Last",
     title: "Owner & Trainer",
+    data_aos:"zoom-in",
+    data_aos_delay: "800"
   },
 ]

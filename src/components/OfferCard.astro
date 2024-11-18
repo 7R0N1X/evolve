@@ -7,8 +7,8 @@ import { OFFERS } from "../js/offers.js";
 ---
 
 {
-  OFFERS.map(({ img, title, description }) => (
-    <article class="relative flex flex-col justify-center items-center min-w-[300px] max-w-[300px] snap-always snap-center">
+  OFFERS.map(({ img, title, description, data_aos, data_aos_delay }) => (
+    <article data-aos={data_aos} data-aos-delay={data_aos_delay} class="relative flex flex-col justify-center items-center min-w-[300px] max-w-[300px] snap-always snap-center">
 
       <Image src={img} alt={title} class="rounded-lg w-full h-full" />
 
