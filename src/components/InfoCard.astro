@@ -6,12 +6,12 @@ import CustomizedImage from "./CustomizedImage.astro"
 ---
 
 {
-  information.map(({ imagen: [{mobile, desktop}], imgPosition, title, description, descriptionPosition, data_aos, data_aos_delay }) => (
-    <article data-aos={data_aos} data-aos-delay={data_aos_delay} class={`min-w-[300px] snap-always snap-center lg:relative lg:max-w-screen-xl lg:flex ${imgPosition} lg:items-center`}>
+  information.map(({ imagen: [{mobile, desktop}], imgPosition, title, description, descriptionPosition, data_aos_img, data_aos_desc }) => (
+    <article class={`min-w-[300px] snap-always snap-center lg:relative lg:max-w-screen-xl lg:flex ${imgPosition} lg:items-center`}>
 
-      <CustomizedImage mobileImgUrl={mobile} desktopImgUrl={desktop} alt={title} class="h-64 w-full lg:w-[668px] lg:h-[534px] object-cover rounded-t-lg lg:rounded-lg" />
+      <CustomizedImage dataAos={data_aos_img} mobileImgUrl={mobile} desktopImgUrl={desktop} alt={title} class="h-64 w-full lg:w-[668px] lg:h-[534px] object-cover rounded-t-lg lg:rounded-lg" />
 
-      <section class={`bg-[#0D0D0D] text-white p-4 lg:py-20 lg:px-[60px] lg:absolute ${descriptionPosition} lg:w-1/2 rounded-b-lg lg:rounded-lg`}>
+      <section data-aos={data_aos_desc} class={`bg-[#0D0D0D] text-white p-4 lg:py-20 lg:px-[60px] lg:absolute ${descriptionPosition} lg:w-1/2 rounded-b-lg lg:rounded-lg`}>
         <h3 class="text-lg md:text-xl uppercase font-bold mb-2">{title}</h3>
         <p>{description}</p>
       </section>
