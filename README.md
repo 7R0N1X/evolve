@@ -14,7 +14,7 @@ Antes de comenzar, asegúrate de tener instalado:
 
 ```bash
   git clone https://github.com/7R0N1X/evolve.git
-  cd evolce
+  cd evolve
 ```
 
 ### Instalar dependencias
