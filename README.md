@@ -1,38 +1,49 @@
-### Screenshot
-![Screenshot](https://github.com/7R0N1X/evolve/assets/92642223/386601c0-0cb9-405d-b0c5-8dbd6291f43e)
+# Evolve Gym
 
+Landing page creada con Astro para presentar información sobre Evolve Gym, un gimnasio ficticio diseñado con el propósito de practicar desarrollo web.
 
-### Prerequisitos
+## Instalación
 
-- NVM (recomendado para asegurar versión de Node) ver [documentación oficial](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+### Requisitos previos
 
-  ```sh
-  nvm use
-  # o
-  nvm use <version>
-  ```
+Antes de comenzar, asegúrate de tener instalado:
 
-### Instalación
+- Node.js
 
-1. Clona el repositorio
+### Clonar el repositorio
 
-   ```sh
-   git clone https://github.com/7R0N1X/evolve.git
-   ```
+```bash
+  git clone https://github.com/7R0N1X/evolve.git
+  cd evolce
+```
 
-2. Instala los paquetes de NPM
+### Instalar dependencias
 
-   ```sh
-   pnpm install
-   ```
+Si no tienes pnpm instalado, primero instala pnpm globalmente:
 
-3. Ejecuta el proyecto
+```bash
+  npm install -g pnpm
+```
+Luego, instala las dependencias del proyecto:
 
-   ```sh
-   pnpm run dev
-   ```
+```bash
+  pnpm install
+```
 
-### Stack
+### Iniciar el servidor
 
-![Astro](https://img.shields.io/badge/-Astro-333333?style=flat&logo=Astro)
-![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-333333?style=flat&logo=tailwind-css&logoColor=38B2AC)
+```bash
+  pnpm run dev
+```
+
+La aplicación estará disponible en http://localhost:4321.
+
+## Tecnologías Utilizadas
+
+![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-FF5A00?style=for-the-badge&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+## Licencia
+
+Este proyecto es de código abierto bajo la [licencia MIT](https://github.com/7R0N1X/evolve/blob/main/LICENSE).
